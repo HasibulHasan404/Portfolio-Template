@@ -1,0 +1,1877 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="15-year-old Full-Stack Developer from Bangladesh. Skilled in web development, programming, and graphic design. Currently working at Sylhet Cyber Security (SCS)."
+    />
+    <meta
+      name="keywords"
+      content="Hasibul Hasan Siam, Full-Stack Developer, Web Developer, Programmer, Bangladesh, SCS, Graphic Design"
+    />
+    <meta name="author" content="Hasibul Hasan Siam" />
+    <meta property="og:title" content="Hasibul Hasan Siam - Portfolio" />
+    <meta
+      property="og:description"
+      content="15-year-old Full-Stack Developer from Bangladesh. Skilled in web development, programming, and graphic design."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
+    <title>Hasibul Hasan Siam - Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #10b981;
+        --primary-dark: #059669;
+        --primary-light: #34d399;
+        --background: #101012;
+        --surface: #18181a;
+        --surface-hover: #202022;
+        --text: #f8fafc;
+        --text-secondary: #cbd5e1;
+        --border: #27272a;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", "SolaimanLipi", sans-serif;
+        background: linear-gradient(
+          135deg,
+          var(--background) 0%,
+          #141416 50%,
+          var(--background) 100%
+        );
+        color: var(--text);
+        line-height: 1.6;
+        min-height: 100vh;
+        cursor: none; /* Hide default cursor */
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 8rem 2rem 6rem;
+      }
+
+      .hero {
+        text-align: center;
+        margin-bottom: 6rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding-top: 2rem;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: var(--primary);
+        filter: blur(150px);
+        opacity: 0.15;
+        z-index: -1;
+        animation: pulse 4s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 0.15;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 0.1;
+        }
+      }
+
+      .hero-badge {
+        background: rgba(16, 185, 129, 0.1);
+        color: var(--primary);
+        padding: 0.75rem 1.5rem;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.1);
+      }
+
+      .hero h1 {
+        font-size: 4.5rem;
+        font-weight: 800;
+        letter-spacing: -1px;
+        background: linear-gradient(to right, var(--text), #94a3b8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .hero-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: rgba(16, 185, 129, 0.1);
+        border-radius: 50px;
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        -webkit-background-clip: initial;
+        -webkit-text-fill-color: initial;
+      }
+
+      .hero-title i {
+        font-size: 1.25rem;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
+        margin-bottom: 5rem;
+      }
+
+      .info-card {
+        background: rgba(24, 24, 26, 0.6);
+        backdrop-filter: blur(10px);
+        border-radius: 24px;
+        padding: 2.5rem;
+        border: 1px solid rgba(71, 85, 105, 0.2);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+
+      .skill-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.25rem;
+        background: rgba(24, 24, 26, 0.6);
+        border-radius: 16px;
+        font-weight: 500;
+        min-width: 160px;
+        white-space: nowrap;
+      }
+
+      .skill-item i {
+        font-size: 1.5rem;
+        color: var(--primary);
+      }
+
+      .skill-item span {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .skill-item span i {
+        font-size: 1.25rem;
+        color: var(--primary);
+      }
+
+      .about-section {
+        background: rgba(24, 24, 26, 0.6);
+        backdrop-filter: blur(10px);
+        border-radius: 24px;
+        padding: 3.5rem;
+        margin-bottom: 5rem;
+        border: 1px solid rgba(71, 85, 105, 0.2);
+      }
+
+      .about-section h2 {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 2rem;
+        color: var(--primary);
+        margin-bottom: 2rem;
+      }
+
+      .about-section p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--text-secondary);
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+      }
+
+      .contact-item {
+        background: rgba(24, 24, 26, 0.6);
+        padding: 2rem;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .contact-item i {
+        font-size: 1.75rem;
+        padding: 1rem;
+        background: rgba(16, 185, 129, 0.1);
+        border-radius: 12px;
+        color: var(--primary);
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 3rem;
+      }
+
+      .social-link {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: rgba(24, 24, 26, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text);
+        text-decoration: none;
+        border: 1px solid rgba(71, 85, 105, 0.2);
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 1;
+        cursor: none;
+      }
+
+      .social-link:hover {
+        background: var(--primary);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+      }
+
+      .social-link i {
+        position: relative;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      /* Add new scroll indicator */
+      .scroll-indicator {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--primary-gradient);
+        transform-origin: left;
+        transform: scaleX(0);
+        transition: transform 0.2s ease;
+      }
+
+      /* Add custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: var(--background);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--primary);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--primary-dark);
+      }
+
+      /* Add new hover effects */
+      .info-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
+      }
+
+      .contact-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(16, 185, 129, 0.1);
+      }
+
+      .contact-item:hover i {
+        background: var(--primary);
+        color: white;
+      }
+
+      /* Add responsive improvements */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 3rem;
+        }
+        .container {
+          padding: 6rem 1.5rem 4rem;
+        }
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+        .about-section {
+          padding: 2.5rem;
+        }
+        .skill-list {
+          grid-template-columns: 1fr !important; /* Force single column */
+          gap: 0.8rem;
+        }
+        .skill-item {
+          width: 100%;
+          padding: 1rem;
+          min-height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+        .skill-item i {
+          font-size: 1.3rem;
+          min-width: 24px;
+        }
+        .skill-item span {
+          font-size: 0.95rem;
+          margin-left: 1rem;
+        }
+
+        /* Disable some hover effects on mobile */
+        .skill-item:hover {
+          transform: none;
+          background: rgba(16, 185, 129, 0.1);
+        }
+
+        .skill-item:hover i {
+          transform: none;
+        }
+      }
+
+      /* Custom cursor styles */
+      .cursor {
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--primary);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        transition: all 0.1s ease;
+        transform: translate(-50%, -50%);
+      }
+
+      .cursor-dot {
+        width: 4px;
+        height: 4px;
+        background: var(--primary);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        transition: all 0.15s ease-out;
+        transform: translate(-50%, -50%);
+      }
+
+      /* Cursor hover effects */
+      .hover-effect {
+        transform: translate(-50%, -50%) scale(1.5);
+        background: rgba(16, 185, 129, 0.1);
+        border-color: transparent;
+      }
+
+      /* Smooth reveal animations */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Stagger delay for grid items */
+      .info-grid .info-card:nth-child(1) {
+        transition-delay: 0.1s;
+      }
+      .info-grid .info-card:nth-child(2) {
+        transition-delay: 0.2s;
+      }
+
+      .skill-item:nth-child(1) {
+        transition-delay: 0.1s;
+      }
+      .skill-item:nth-child(2) {
+        transition-delay: 0.2s;
+      }
+      .skill-item:nth-child(3) {
+        transition-delay: 0.3s;
+      }
+      .skill-item:nth-child(4) {
+        transition-delay: 0.4s;
+      }
+      .skill-item:nth-child(5) {
+        transition-delay: 0.5s;
+      }
+      .skill-item:nth-child(6) {
+        transition-delay: 0.6s;
+      }
+
+      /* Enhanced hover effects */
+      .skill-item {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .skill-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(16, 185, 129, 0.2),
+          transparent
+        );
+        transition: 0.5s;
+      }
+
+      .skill-item:hover::before {
+        left: 100%;
+      }
+
+      /* Magnetic effect for social links */
+      .social-link {
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* Add 3D effect to cards */
+      .info-card,
+      .about-section,
+      .contact-item {
+        transform-style: preserve-3d;
+        perspective: 1000px;
+      }
+
+      .info-card:hover,
+      .about-section:hover,
+      .contact-item:hover {
+        transform: translateY(-5px) rotateX(5deg) rotateY(5deg);
+      }
+
+      /* Add glow effect on hover */
+      .hero-badge:hover {
+        box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
+      }
+
+      /* Floating animation for cards */
+      .info-card {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      /* Skill item hover animation */
+      .skill-item {
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .skill-item:hover {
+        transform: translateY(-5px) scale(1.05);
+        background: rgba(16, 185, 129, 0.1);
+        box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+      }
+
+      .skill-item i {
+        transition: all 0.5s ease;
+      }
+
+      .skill-item:hover i {
+        transform: scale(1.2) rotate(360deg);
+        color: var(--primary);
+      }
+
+      /* Ripple effect for contact items */
+      .contact-item {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .contact-item::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+        transition: width 0.5s ease, height 0.5s ease;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+
+      .contact-item:hover::after {
+        width: 200%;
+        height: 200%;
+        opacity: 0.1;
+      }
+
+      /* Social links hover effect */
+      .social-link {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .social-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--primary);
+        transform: translateY(100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 0;
+      }
+
+      .social-link:hover::before {
+        transform: translateY(0);
+      }
+
+      .social-link i {
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s ease;
+      }
+
+      .social-link:hover i {
+        transform: scale(1.2);
+        color: var(--background);
+      }
+
+      /* Smooth page transitions */
+      .container {
+        animation: pageLoad 1s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      @keyframes pageLoad {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Skill grid layout animation */
+      .skill-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+      }
+
+      .skill-item {
+        transform: rotateX(10deg);
+        transition: transform 0.4s ease;
+      }
+
+      .skill-item:hover {
+        transform: rotateX(0deg) scale(1.05);
+      }
+
+      /* Add parallax effect to sections */
+      .about-section,
+      .contact-grid {
+        transform: translateZ(0);
+        transition: transform 0.3s ease;
+      }
+
+      .about-section:hover,
+      .contact-grid:hover {
+        transform: translateZ(50px);
+      }
+
+      /* Scroll animations */
+      .fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .fade-in {
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+      }
+
+      /* Progress bar */
+      .progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: var(--primary-gradient);
+        z-index: 9998;
+      }
+
+      /* Text loading animation */
+      .typing-text {
+        position: relative;
+        width: fit-content;
+        margin: 0 auto;
+      }
+
+      .typing-text::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--background);
+        animation: typing 3s steps(24) forwards;
+      }
+
+      .typing-text::after {
+        content: "|";
+        position: absolute;
+        right: 0;
+        color: var(--primary);
+        background: var(--background);
+        width: 20px;
+        animation: caret 0.5s infinite, typing 3s steps(24) forwards;
+      }
+
+      @keyframes typing {
+        to {
+          width: 0;
+        }
+      }
+
+      @keyframes caret {
+        50% {
+          color: transparent;
+        }
+      }
+
+      .text-reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: textReveal 0.8s ease forwards;
+      }
+
+      .text-reveal.delay-1 {
+        animation-delay: 0.3s;
+      }
+      .text-reveal.delay-2 {
+        animation-delay: 0.6s;
+      }
+      .text-reveal.delay-3 {
+        animation-delay: 0.9s;
+      }
+      .text-reveal.delay-4 {
+        animation-delay: 1.2s;
+      }
+      .text-reveal.delay-5 {
+        animation-delay: 1.5s;
+      }
+
+      @keyframes textReveal {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Simple name animation */
+      .hero h1 {
+        opacity: 0;
+        animation: nameReveal 1s ease forwards;
+      }
+
+      @keyframes nameReveal {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* GitHub-like scroll effect */
+      .scroll-section {
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1);
+      }
+
+      .scroll-section.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .scroll-scale {
+        transform: scale(0.94);
+        opacity: 0;
+        transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1);
+      }
+
+      .scroll-scale.active {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      .scroll-fade {
+        opacity: 0;
+        transition: opacity 0.9s cubic-bezier(0.17, 0.55, 0.55, 1);
+      }
+
+      .scroll-fade.active {
+        opacity: 1;
+      }
+
+      .skill-item span {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-left: 0.5rem;
+      }
+
+      .skill-item span i {
+        font-size: 1rem;
+        color: var(--primary);
+        transition: transform 0.3s ease;
+      }
+
+      .skill-item:hover span i {
+        transform: translateX(5px);
+      }
+
+      /* Add hover effect for icons */
+      .skill-item:hover i {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+      }
+
+      /* Add info items */
+      .info-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.75rem 0;
+        transition: all 0.3s ease;
+      }
+
+      .info-item p {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: var(--text-secondary);
+      }
+
+      .info-item i {
+        font-size: 1.25rem;
+        color: var(--primary);
+      }
+
+      .info-item:hover {
+        transform: translateX(10px);
+      }
+
+      .info-item:hover i {
+        transform: scale(1.1);
+      }
+
+      .social-link {
+        transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .cursor,
+      .cursor-dot {
+        transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* Also add cursor: none to all interactive elements */
+      a,
+      button,
+      .skill-item,
+      .social-link,
+      .contact-item,
+      .info-item {
+        cursor: none;
+      }
+
+      /* Touch cursor styles */
+      .touch-cursor {
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        background: rgba(16, 185, 129, 0.2);
+        border: 2px solid var(--primary);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        opacity: 1; /* Always visible */
+        transform: translate(-50%, -50%) scale(1); /* Always showing */
+        transition: transform 0.3s ease;
+      }
+
+      .touch-cursor.clicking {
+        transform: translate(-50%, -50%) scale(1.5);
+        background: rgba(16, 185, 129, 0.3);
+      }
+
+      /* Show touch-cursor and hide default cursor on touch devices */
+      @media (hover: none) {
+        .cursor,
+        .cursor-dot {
+          display: none;
+        }
+      }
+
+      /* Selection styles */
+      ::selection {
+        background: rgba(16, 185, 129, 0.15);
+        color: var(--primary);
+      }
+
+      ::-moz-selection {
+        background: rgba(16, 185, 129, 0.15);
+        color: var(--primary);
+      }
+
+      /* Add highlight animation */
+      @keyframes highlightIn {
+        from {
+          background: rgba(16, 185, 129, 0);
+        }
+        to {
+          background: var(--primary);
+        }
+      }
+
+      ::selection {
+        animation: highlightIn 0.2s ease-out forwards;
+      }
+
+      ::-moz-selection {
+        animation: highlightIn 0.2s ease-out forwards;
+      }
+
+      /* Improve mobile performance */
+      @media (max-width: 768px) {
+        /* Smoother animations */
+        .info-card,
+        .skill-item,
+        .contact-item {
+          transition: transform 0.3s ease;
+        }
+
+        /* Reduce animation complexity */
+        .info-card:hover,
+        .about-section:hover,
+        .contact-item:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba(16, 185, 129, 0.1);
+        }
+
+        /* Adjust grid layout */
+        .skill-list {
+          grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+          gap: 0.8rem;
+        }
+
+        /* Optimize touch interactions */
+        .skill-item {
+          padding: 1rem;
+          min-height: 60px;
+        }
+
+        /* Better spacing */
+        .container {
+          padding: 3rem 1rem;
+        }
+
+        .hero {
+          margin-bottom: 4rem;
+        }
+
+        /* Reduce parallax effects */
+        .about-section:hover,
+        .contact-grid:hover {
+          transform: none;
+        }
+
+        /* Optimize floating animation */
+        .info-card {
+          animation: none;
+        }
+
+        /* Better touch feedback */
+        .touch-cursor {
+          transform: translate(-50%, -50%) scale(0.8);
+        }
+
+        .touch-cursor.clicking {
+          transform: translate(-50%, -50%) scale(1.2);
+        }
+
+        /* Improve scroll performance */
+        .scroll-section {
+          transition: all 0.6s ease;
+        }
+
+        /* Adjust Buy Me a Coffee button position */
+        .bmc-btn-container {
+          bottom: 5.5rem !important;
+          right: 1rem !important;
+        }
+
+        /* If using custom button */
+        .coffee-button {
+          bottom: 5.5rem !important;
+          right: 1rem !important;
+        }
+
+        /* Add z-index to ensure button stays above content */
+        .bmc-btn-container,
+        .coffee-button {
+          z-index: 999 !important;
+        }
+      }
+
+      /* Add smooth scroll behavior for iOS */
+      @supports (-webkit-overflow-scrolling: touch) {
+        html {
+          -webkit-overflow-scrolling: touch;
+        }
+      }
+
+      /* PC Styles */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(16, 16, 18, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        border-bottom: 1px solid var(--border);
+        height: 4rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        color: var(--text-secondary);
+        text-decoration: none;
+        padding: 0.75rem 1.25rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        height: 40px;
+        position: relative;
+      }
+
+      .nav-link i {
+        font-size: 1.25rem;
+      }
+
+      .nav-link span {
+        font-weight: 500;
+      }
+
+      .nav-link:hover {
+        color: var(--primary);
+        transform: translateY(-2px);
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: var(--primary);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+
+      .nav-link:hover::after {
+        width: 80%;
+      }
+
+      .nav-link.active {
+        color: var(--primary);
+      }
+
+      .nav-link.active::after {
+        width: 80%;
+      }
+
+      /* Updated Mobile Styles */
+      @media (max-width: 768px) {
+        .navbar {
+          top: auto;
+          bottom: 1rem;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 90%;
+          max-width: 420px;
+          height: 4.2rem;
+          border-radius: 24px;
+          border: 1px solid rgba(71, 85, 105, 0.2);
+          background: rgba(16, 16, 18, 0.95);
+          backdrop-filter: blur(10px);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .nav-container {
+          padding: 0;
+        }
+
+        .nav-links {
+          gap: 1rem;
+          width: 100%;
+          justify-content: space-evenly;
+          padding: 0 1rem;
+        }
+
+        .nav-link {
+          flex-direction: column;
+          gap: 0.3rem;
+          padding: 0.5rem;
+          height: auto;
+          width: 65px;
+          position: relative;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-link i {
+          font-size: 1.5rem;
+          transition: all 0.3s ease;
+        }
+
+        .nav-link span {
+          font-size: 0.75rem;
+          font-weight: 500;
+          display: block;
+          opacity: 0.7;
+          transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0;
+          height: 3px;
+          background: var(--primary);
+          border-radius: 4px;
+          transform: translateX(-50%);
+          transition: all 0.3s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+          color: var(--primary);
+        }
+
+        .nav-link:hover i,
+        .nav-link.active i {
+          transform: translateY(-2px);
+        }
+
+        .nav-link:hover span,
+        .nav-link.active span {
+          opacity: 1;
+          transform: translateY(-1px);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+          width: 20px;
+        }
+
+        /* Container padding adjustment */
+        .container {
+          padding-bottom: 7rem !important;
+        }
+      }
+
+      /* Global override for Buy Me a Coffee button */
+      #bmc-wbtn,
+      .bmc-btn-container,
+      iframe[src*="buymeacoffee"],
+      div[data-target="Buy Me A Coffee"] {
+        position: fixed !important;
+        bottom: 6rem !important;
+        right: 1rem !important;
+        z-index: 999999 !important;
+      }
+
+      /* Mobile specific overrides */
+      @media (max-width: 768px) {
+        #bmc-wbtn,
+        .bmc-btn-container,
+        iframe[src*="buymeacoffee"],
+        div[data-target="Buy Me A Coffee"] {
+          bottom: 6.5rem !important;
+          right: 1rem !important;
+        }
+
+        /* Container padding adjustment */
+        .container {
+          padding-bottom: 8rem !important;
+        }
+      }
+
+      /* Style for new BMC button */
+      .bmc-btn-container {
+        position: fixed !important;
+        bottom: 6.5rem !important;
+        right: 1rem !important;
+        z-index: 999999 !important;
+      }
+
+      @media (max-width: 768px) {
+        .bmc-btn-container {
+          bottom: 7rem !important;
+          right: 1rem !important;
+        }
+      }
+
+      /* Update navigation styles */
+      .nav-link span {
+        display: none; /* Hide text for all screen sizes */
+      }
+
+      .nav-link {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+      }
+
+      .nav-link i {
+        font-size: 1.4rem;
+      }
+
+      /* Mobile styles */
+      @media (max-width: 768px) {
+        .nav-links {
+          gap: 2.5rem; /* Increased gap between icons */
+        }
+
+        .nav-link i {
+          font-size: 1.5rem; /* Slightly larger icons for mobile */
+        }
+      }
+
+      /* Optimize scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        overflow-y: overlay; /* Better scroll handling */
+        -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+      }
+
+      /* Optimize animations */
+      .scroll-section {
+        will-change: transform, opacity;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* Reduce animation complexity */
+      .scroll-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .scroll-section.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Optimize scroll performance */
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .scroll-section {
+          transition: none;
+        }
+
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      /* Scroll section animations */
+      .scroll-section.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Add these styles */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .contact-item {
+        background: rgba(24, 24, 26, 0.6);
+        backdrop-filter: blur(10px);
+        padding: 1.5rem;
+        border-radius: 16px;
+        border: 1px solid rgba(71, 85, 105, 0.2);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .contact-text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+
+      .label {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      .contact-link {
+        color: var(--primary);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+
+      .contact-item:hover {
+        transform: translateY(-5px);
+        border-color: var(--primary);
+        box-shadow: 0 10px 20px rgba(16, 185, 129, 0.1);
+      }
+
+      .contact-link:hover {
+        color: var(--text);
+        transform: translateX(3px);
+      }
+
+      .contact-item i {
+        font-size: 1.5rem;
+        color: var(--primary);
+        transition: all 0.3s ease;
+        background: rgba(16, 185, 129, 0.1);
+        padding: 0.75rem;
+        border-radius: 12px;
+      }
+
+      .contact-item:hover i {
+        transform: scale(1.1);
+        background: rgba(16, 185, 129, 0.2);
+      }
+
+      @media (max-width: 768px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .contact-text {
+          font-size: 0.9rem;
+        }
+
+        .label {
+          font-size: 0.8rem;
+        }
+
+        .contact-item {
+          padding: 1.25rem;
+        }
+
+        .contact-item i {
+          font-size: 1.3rem;
+          padding: 0.6rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="#home" class="nav-link">
+            <i class="ri-home-line"></i>
+          </a>
+          <a href="#about" class="nav-link">
+            <i class="ri-user-line"></i>
+          </a>
+          <a href="#skills" class="nav-link">
+            <i class="ri-tools-line"></i>
+          </a>
+          <a href="#contact" class="nav-link">
+            <i class="ri-contacts-line"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="progress-bar"></div>
+    <div class="scroll-indicator"></div>
+    <div class="container">
+      <div id="home" class="hero scroll-fade">
+        <h1>
+          Hasibul Hasan Siam
+          <div class="hero-title text-reveal">
+            <i class="ri-code-s-slash-line"></i>
+            Full-Stack Developer
+          </div>
+        </h1>
+      </div>
+
+      <div id="about" class="info-grid">
+        <div class="info-card scroll-section text-reveal delay-1">
+          <h2>
+            <i class="ri-user-3-line"></i>
+            Personal Info
+          </h2>
+          <div class="info-item">
+            <p><i class="ri-user-smile-line"></i> Name: Hasibul Hasan Siam</p>
+          </div>
+          <div class="info-item">
+            <p><i class="ri-calendar-line"></i> Age: 15 Years</p>
+          </div>
+          <div class="info-item">
+            <p><i class="ri-flag-line"></i> Nationality: Bangladeshi</p>
+          </div>
+          <div class="info-item">
+            <p>
+              <i class="ri-school-line"></i> School: Saint Rita's High School
+            </p>
+          </div>
+          <div class="info-item">
+            <p>
+              <i class="ri-briefcase-line"></i> Work: Web Developer at Sylhet
+              Cyber Security (SCS)
+            </p>
+          </div>
+          <div class="info-item">
+            <p><i class="ri-code-box-line"></i> Profession: Coder, Student</p>
+          </div>
+          <div class="info-item">
+            <p>
+              <i class="ri-heart-line"></i> Interest: Programming, Graphic
+              Designing
+            </p>
+          </div>
+          <div class="info-item">
+            <p>
+              <i class="ri-map-pin-line"></i> Location: Rajshahi, Bangladesh
+            </p>
+          </div>
+        </div>
+
+        <div id="skills" class="info-card scroll-scale text-reveal delay-2">
+          <h2>
+            <i class="ri-tools-line"></i>
+            Skills
+          </h2>
+          <div class="skill-list">
+            <div class="skill-item text-reveal delay-2">
+              <i class="ri-code-s-slash-line"></i>
+              <span>Programming</span>
+            </div>
+            <div class="skill-item text-reveal delay-2">
+              <i class="ri-code-box-fill"></i>
+              <span>Java</span>
+            </div>
+            <div class="skill-item text-reveal delay-2">
+              <i class="ri-braces-fill"></i>
+              <span>Python</span>
+            </div>
+            <div class="skill-item text-reveal delay-2">
+              <i class="ri-html5-fill"></i>
+              <span>HTML5</span>
+            </div>
+            <div class="skill-item text-reveal delay-2">
+              <i class="ri-css3-fill"></i>
+              <span>CSS3</span>
+            </div>
+            <div class="skill-item text-reveal delay-2">
+              <i class="ri-javascript-fill"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-item text-reveal delay-2">
+              <i class="ri-database-2-fill"></i>
+              <span>Data Structures</span>
+            </div>
+            <div class="skill-item text-reveal delay-2">
+              <i class="ri-brain-fill"></i>
+              <span>Algorithms</span>
+            </div>
+            <div class="skill-item text-reveal delay-2">
+              <i class="ri-terminal-box-fill"></i>
+              <span>Command Line</span>
+            </div>
+            <div class="skill-item text-reveal delay-2">
+              <i class="ri-server-fill"></i>
+              <span>Backend</span>
+            </div>
+            <div class="skill-item text-reveal delay-2">
+              <i class="ri-edit-2-fill"></i>
+              <span>Photoshop</span>
+            </div>
+            <div class="skill-item text-reveal delay-2">
+              <i class="ri-film-fill"></i>
+              <span>Premiere Pro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="about" class="about-section scroll-section text-reveal delay-3">
+        <h2>
+          <i class="ri-user-voice-line"></i>
+          About Me
+        </h2>
+        <p>
+          I am a young and passionate programmer from Bangladesh, currently
+          working as a Web Developer at Sylhet Cyber Security (SCS) while
+          pursuing my studies at Saint Rita's High School. At just 15 years old,
+          I've developed a strong foundation in web development technologies and
+          find great satisfaction in solving complex programming challenges. My
+          expertise spans across multiple programming languages and
+          technologies, including HTML5, CSS3, JavaScript, Java, and Python. I
+          specialize in both frontend and backend development, creating
+          responsive and user-friendly web applications. My knowledge of data
+          structures and algorithms helps me write efficient and optimized code.
+          Beyond web development, I have a keen interest in graphic design,
+          utilizing tools like Photoshop and Premiere Pro to create visually
+          appealing content. This combination of programming and design skills
+          allows me to approach projects with a holistic perspective, ensuring
+          both functionality and aesthetic appeal. I am constantly learning and
+          staying updated with the latest technologies and industry trends. My
+          role at SCS has given me valuable experience in real-world project
+          development and team collaboration. I balance my academic
+          responsibilities with professional work, demonstrating my ability to
+          manage time effectively and maintain high standards in both areas. My
+          goal is to continue growing as a developer, taking on more challenging
+          projects, and contributing to innovative solutions in the tech
+          industry. I'm particularly interested in exploring new technologies
+          and frameworks that can enhance user experiences and solve real-world
+          problems.
+        </p>
+      </div>
+
+      <div id="contact" class="contact-grid scroll-section">
+        <div class="contact-item text-reveal">
+          <i class="ri-mail-line"></i>
+          <p class="contact-text">
+            <span class="label">Email:</span>
+            <a
+              href="mailto:lets.coding.with.hasan@gmail.com"
+              class="contact-link"
+            >
+              lets.coding.with.hasan@gmail.com
+            </a>
+          </p>
+        </div>
+        <div class="contact-item text-reveal">
+          <i class="ri-phone-line"></i>
+          <p class="contact-text">
+            <span class="label">Phone:</span>
+            <a href="tel:+8801310617787" class="contact-link">
+              +8801310617787
+            </a>
+          </p>
+        </div>
+        <div class="contact-item text-reveal">
+          <i class="ri-github-line"></i>
+          <p class="contact-text">
+            <span class="label">GitHub:</span>
+            <a
+              href="https://github.com/HasibulHasan404"
+              target="_blank"
+              class="contact-link"
+            >
+              github.com/HasibulHasan404
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="social-links scroll-fade text-reveal delay-5">
+        <a
+          href="https://github.com/HasibulHasan404"
+          class="social-link"
+          target="_blank"
+        >
+          <i class="ri-github-line"></i>
+        </a>
+        <a
+          href="https://twitter.com/mystery_boyR"
+          class="social-link"
+          target="_blank"
+        >
+          <i class="ri-twitter-x-line"></i>
+        </a>
+        <a
+          href="https://www.facebook.com/MysteryBoyrl/"
+          class="social-link"
+          target="_blank"
+        >
+          <i class="ri-facebook-line"></i>
+        </a>
+      </div>
+    </div>
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+    <div class="touch-cursor"></div>
+    <script>
+      // Add scroll indicator functionality
+      window.addEventListener("scroll", () => {
+        const scrollIndicator = document.querySelector(".scroll-indicator");
+        const scrolled =
+          (window.scrollY /
+            (document.documentElement.scrollHeight - window.innerHeight)) *
+          100;
+        scrollIndicator.style.transform = `scaleX(${scrolled / 100})`;
+      });
+
+      // Cursor effect
+      const cursor = document.querySelector(".cursor");
+      const cursorDot = document.querySelector(".cursor-dot");
+
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+        cursorDot.style.left = e.clientX + "px";
+        cursorDot.style.top = e.clientY + "px";
+      });
+
+      // Add hover effect to interactive elements
+      const interactiveElements = document.querySelectorAll(
+        "a, button, .skill-item, .social-link, .contact-item, .info-item"
+      );
+      interactiveElements.forEach((el) => {
+        el.addEventListener("mouseenter", () =>
+          cursor.classList.add("hover-effect")
+        );
+        el.addEventListener("mouseleave", () =>
+          cursor.classList.remove("hover-effect")
+        );
+      });
+
+      // Reveal on scroll
+      function reveal() {
+        const reveals = document.querySelectorAll(".reveal");
+        reveals.forEach((el) => {
+          const windowHeight = window.innerHeight;
+          const elementTop = el.getBoundingClientRect().top;
+          const elementVisible = 150;
+
+          if (elementTop < windowHeight - elementVisible) {
+            el.classList.add("active");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", reveal);
+      reveal(); // Initial check
+
+      // Magnetic effect for social links
+      document.querySelectorAll(".social-link").forEach((link) => {
+        link.addEventListener("mousemove", (e) => {
+          const bounds = link.getBoundingClientRect();
+          const mouseX = e.clientX - bounds.left;
+          const mouseY = e.clientY - bounds.top;
+          const centerX = bounds.width / 2;
+          const centerY = bounds.height / 2;
+
+          // Stronger magnetic effect
+          const moveX = (mouseX - centerX) / 2;
+          const moveY = (mouseY - centerY) / 2;
+
+          // Move both link and cursor
+          link.style.transform = `translate(${moveX}px, ${moveY}px)`;
+
+          // Calculate cursor position relative to the icon
+          const cursorX = e.clientX + moveX * 0.5;
+          const cursorY = e.clientY + moveY * 0.5;
+
+          // Move cursor with magnetic effect
+          cursor.style.left = `${cursorX}px`;
+          cursor.style.top = `${cursorY}px`;
+          cursorDot.style.left = `${cursorX}px`;
+          cursorDot.style.top = `${cursorY}px`;
+
+          // Add attraction effect to cursor
+          cursor.style.transform = `translate(-50%, -50%) scale(1.5)`;
+          cursorDot.style.transform = `translate(-50%, -50%) scale(0.5)`;
+        });
+
+        link.addEventListener("mouseleave", () => {
+          link.style.transform = "";
+          cursor.style.transform = "translate(-50%, -50%)";
+          cursorDot.style.transform = "translate(-50%, -50%)";
+        });
+      });
+
+      // Add smooth scroll behavior
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Add intersection observer for better scroll animations
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = 1;
+              entry.target.style.transform = "translateY(0)";
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      document
+        .querySelectorAll(".info-card, .about-section, .contact-item")
+        .forEach((el) => {
+          el.style.opacity = 0;
+          el.style.transform = "translateY(20px)";
+          observer.observe(el);
+        });
+
+      // Scroll progress bar
+      const progressBar = document.querySelector(".progress-bar");
+      window.addEventListener("scroll", () => {
+        const windowHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const scrolled = (window.scrollY / windowHeight) * 100;
+        progressBar.style.width = `${scrolled}%`;
+      });
+
+      // Scroll animations
+      function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+          rect.top <=
+          (window.innerHeight || document.documentElement.clientHeight) * 0.8
+        );
+      }
+
+      function handleScroll() {
+        document.querySelectorAll(".fade-up, .fade-in").forEach((el) => {
+          if (isElementInViewport(el) && !el.classList.contains("visible")) {
+            el.classList.add("visible");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", handleScroll);
+      window.addEventListener("resize", handleScroll);
+
+      // GitHub-like scroll effect
+      const scrollElements = document.querySelectorAll(
+        ".scroll-section, .scroll-scale, .scroll-fade"
+      );
+
+      const elementInView = (el, offset = 0) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (
+          elementTop <=
+          (window.innerHeight || document.documentElement.clientHeight) *
+            (1 - offset)
+        );
+      };
+
+      const displayScrollElement = (element) => {
+        element.classList.add("active");
+      };
+
+      const hideScrollElement = (element) => {
+        element.classList.remove("active");
+      };
+
+      const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+          if (elementInView(el, 0.25)) {
+            displayScrollElement(el);
+          } else {
+            hideScrollElement(el);
+          }
+        });
+      };
+
+      window.addEventListener("scroll", () => {
+        handleScrollAnimation();
+      });
+
+      // Initial check
+      handleScrollAnimation();
+
+      // Touch cursor functionality
+      const touchCursor = document.querySelector(".touch-cursor");
+      let touchTimeout;
+
+      document.addEventListener("touchstart", (e) => {
+        const touch = e.touches[0];
+        touchCursor.style.left = `${touch.clientX}px`;
+        touchCursor.style.top = `${touch.clientY}px`;
+        touchCursor.classList.add("clicking");
+
+        clearTimeout(touchTimeout);
+        touchTimeout = setTimeout(() => {
+          touchCursor.classList.remove("clicking");
+        }, 300);
+      });
+
+      document.addEventListener("touchmove", (e) => {
+        const touch = e.touches[0];
+        touchCursor.style.left = `${touch.clientX}px`;
+        touchCursor.style.top = `${touch.clientY}px`;
+      });
+
+      document.addEventListener("touchend", () => {
+        touchCursor.classList.remove("clicking");
+      });
+    </script>
+    <script
+      data-name="BMC-Widget"
+      data-cfasync="false"
+      src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+      data-id="mysteryboy_0"
+      data-description="Support me on Buy me a coffee!"
+      data-message=""
+      data-color="#40DCA5"
+      data-position="Right"
+      data-x_margin="18"
+      data-y_margin="18"
+    ></script>
+    <script>
+      // Single observer for all scroll animations
+      const scrollObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+              scrollObserver.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: "50px",
+        }
+      );
+
+      // Observe all scroll sections
+      document.querySelectorAll(".scroll-section").forEach((section) => {
+        scrollObserver.observe(section);
+      });
+    </script>
+  </body>
+</html>

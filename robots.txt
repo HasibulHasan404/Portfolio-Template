@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://profileinfo.pages.dev/sitemap.xml
+
+# Allow all robots to crawl all content
+# Specify paths that should be crawled
+Allow: /index.html
